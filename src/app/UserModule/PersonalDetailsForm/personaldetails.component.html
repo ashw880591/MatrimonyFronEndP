@@ -1,0 +1,224 @@
+ 
+
+       
+
+     
+
+        <form [formGroup]="PersonalDetails"  >
+            <div class=" container">
+                <mat-card-title class="title">Personal Details</mat-card-title>
+                <div class="form-row">
+                     
+                <div class="form-group  col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Blood_Group </mat-label>
+                        <mat-select formControlName="blood_group">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span
+                            *ngIf="isSubmitted && PersonalDetails.controls['blood_group'].hasError('required')&&
+                    (PersonalDetails.controls.blood_group.touched ||PersonalDetails.controls['blood_group'].dirty|| isSubmitted)">
+                            blood_group is required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width" appearance="outline">
+                        <mat-label>height </mat-label>
+                        <mat-select formControlName="height">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['height'].hasError('required')&&
+            (PersonalDetails.controls.height.touched ||PersonalDetails.controls['height'].dirty|| isSubmitted)">
+                            height is required.</span>
+                    </mat-error>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>weight </mat-label>
+                        <mat-select formControlName="weight">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['weight'].hasError('required')&&
+    (PersonalDetails.controls.weight.touched ||PersonalDetails.controls['weight'].dirty|| isSubmitted)">
+                            weight is required.</span>
+                    </mat-error>
+                </div>
+
+
+
+
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Body Type </mat-label>
+                        <mat-select formControlName="body_type">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="PersonalDetails.controls['body_type'].hasError('required')&&
+(PersonalDetails.controls.body_type.touched ||PersonalDetails.controls['body_type'].dirty|| isSubmitted)">
+                            Body Type is required.</span>
+                    </mat-error>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Lens </mat-label>
+                        <mat-select formControlName="lens">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['lens'].hasError('required')&&
+(PersonalDetails.controls.lens.touched ||PersonalDetails.controls['lens'].dirty|| isSubmitted)">
+                            Lens In required.</span>
+                    </mat-error>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Spectacles </mat-label>
+                        <mat-select formControlName="spectacles">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['spectacles'].hasError('required')&&
+(PersonalDetails.controls.spectacles.touched ||PersonalDetails.controls['spectacles'].dirty|| isSubmitted)">
+                            Spectacles In required.</span>
+                    </mat-error>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Complexion </mat-label>
+                        <mat-select formControlName="complexion">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['complexion'].hasError('required')&&
+(PersonalDetails.controls.complexion.touched ||PersonalDetails.controls['complexion'].dirty)">
+                            Spectacles In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>NRI </mat-label>
+                        <mat-select formControlName="NRI">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" isSubmitted && PersonalDetails.controls['NRI'].hasError('required')&&
+(PersonalDetails.controls.NRI.touched ||PersonalDetails.controls['NRI'].dirty)">
+                            NRI In required.</span>
+                    </mat-error>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Smoking </mat-label>
+                        <mat-select formControlName="smoking">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+                            <mat-option>Occasionally</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['smoking'].hasError('required')&&
+(PersonalDetails.controls.smoking.touched ||PersonalDetails.controls['smoking'].dirty)">
+                            smoking In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label>Drinking </mat-label>
+                        <mat-select formControlName="drinking">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+                            <mat-option>Occasionally</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['drinking'].hasError('required')&&
+(PersonalDetails.controls.drinking.touched ||PersonalDetails.controls['drinking'].dirty)">
+                            Drinking In required.</span>
+                    </mat-error>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
+                        <mat-label> Eating Habits </mat-label>
+                        <mat-select formControlName="eating_habits">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="iisSubmitted && PersonalDetails.controls['eating_habits'].hasError('required')&&
+(PersonalDetails.controls.eating_habits.touched ||PersonalDetails.controls['eating_habits'].dirty)">
+                            Drinking In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <button mat-raised-button class="button"color="primary" (click)="onSubmit(PersonalDetails.value)">Save & Next</button>
+                <button mat-raised-button class="button" color="warn">Clear</button>
+             
+                </div>
+
+            </div>
+            </div>
+            
+             
+                
+        </form>
+     
+ 

@@ -1,0 +1,40 @@
+.example-card {
+    max-width: 300px;
+    max-height: 200px;
+     margin-left: 300px;
+     margin-top: 100px;
+    background-color: rgb(66, 8, 23);
+    color: white;
+  }
+  
+  .example-header-image {
+    background-image: url('src/assets/Images/rishtalogo.png');
+    background-size: cover;
+  }
+
+  .example-card1 {
+    max-width: 350px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 100px;
+    background-color: rgb(66, 8, 23);
+    color: white;
+  }
+  .example-card2 {
+    max-width: 350px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 100px;
+    color: white;
+    background-color: rgb(66, 8, 23);
+  }
+  mat-card-content
+  {
+    color: rgb(14, 13, 13);
+    height: 40px;
+    text-align: center ;
+    font-size: 17px;
+    font-weight: bold;;
+    
+  }
+
